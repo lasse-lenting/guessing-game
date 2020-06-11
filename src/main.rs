@@ -3,8 +3,8 @@ use std::cmp::Ordering;
 use std::io;
 
 const MAX_TRIES: u32 = 5;
-const EXIT_VALUES: [&str;4] = ["quit", "exit", "stop", "done"];
 const MAX_RESETS: u32 = 3;
+const EXIT_VALUES: [&str;4] = ["quit", "exit", "stop", "done"];
 
 fn main() {
     println!("Guess the number!");
@@ -13,19 +13,19 @@ fn main() {
     let mut resets: u32 = 0;
 
     loop {
-        println!("Please input your guess");
+        println!("Please input your guess.");
         let mut guess = String::new();
         
         io::stdin()
             .read_line(&mut guess)
-            .expect("Failed to read line");
+            .expect("Failed to read line.");
 
         if EXIT_VALUES.contains(&guess.trim()) {
             println!("Exiting...");
             break;
         }
 
-        if (resets == MAX_RESETS) && (guess.trim() == "reset") {
+        if (guess.trim() == "reset") && (resets == MAX_RESETS) {
             println!("You have reached the max amount of resets! You cannot use anymore.");
         }
 
