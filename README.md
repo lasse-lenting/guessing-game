@@ -10,4 +10,4 @@ A simple CLI-based guessing game where I show how and what I'm learning with Rus
 * [x] When a guess is sumbitted, display remaining amount of tries as well as total amount  
 * [x] Quit game if user types `quit`, `stop`, or `exit`, or similar keywords as a guess  
 * [x] If `reset` is entered as a guess, reset the number of tries to `0`  
-* [x] Set a max number of resets  
+[x] Set a max number of resets  
